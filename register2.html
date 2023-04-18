@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <style>
+            .head{
+                font-size: 75px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background: -webkit-linear-gradient(#eb090d, #333);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; ;
+            }
+            .bdy{
+                background-color: #240b7d;
+                background-image: url("home.png");
+                background-attachment: fixed;
+  background-position: top;
+            }
+            
+            .center {
+  display: block;
+  margin-top: -2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 98px;
+}
+            div.op {
+  background-color: #ffffff;
+  border: 1px 
+  opacity: 0.5;
+}
+
+div.op th {
+  font-weight: bold;
+  color: black;
+  font-size: 30px;
+}
+        </style>
+
+    </head>
+
+    <body class="bdy">
+        <img src="a.png" class="center">
+        <br>
+        <div class="op">
+            <table style="width:100% ;">
+                <tr>
+                    <th style="width:25%">Email:TNBANK@gmail.com</th>
+                    <th style="width:50%">Welcome to Bank of TN</th>
+                    <th style="width:25%">Phone no:1234567893</th>
+                </table></div>
+                <br>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active"><i class="fa fa-fw fa-home "></i>Home</a>
+             <a href="login.html" style="float: right"><i class="fa fa-fw fa-sign-in "></i>Login</a>
+            <a href="register.html" style="float: right"><i class="fa fa-fw fa-sign-in "></i>Sign Up</a> 
+        </div>
+          <div class="container">
+            <h1 class="main-header">Account Application Form.</h1>
+            <hr>
+            <form id="app-form" action="/register1.php" method="post">
+            <fieldset class="sub-container" id="basic-details">
+              <h2 class="sub-heading">Basic Details</h2>
+              <hr>
+                <label for="dropdown" class="standard-label">
+                  Title<span class="required">*</span>
+                  <br>
+                  <select  id="dropdown" class="standard-select" name="prefix" required>
+                    <option value="select" disabled selected>Select Title</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Prof">Prof</option>
+                  </select>
+                </label>
+                <label for="firstname" class="standard-label">
+                  First Name<span class="required">*</span>
+                  <input class="standard-input" name="firstname" id="firstname" type="text" placeholder="First name..." required>
+                </label>
+                <label for="middlenames" class="standard-label">
+                  Middle Names (If Applicable)
+                  <input class="standard-input" name="middlename" id="middlename" type="text" placeholder="Middle names...">
+                </label>
+                <label for="lastname" class="standard-label">
+                  Last Name<span class="required">*</span>
+                  <input class="standard-input" name="lastname" id="lastname" type="text" placeholder="Last name..." required>
+                </label>
+                <label for="phone-number" class="standard-label">
+                  Phone Number<span class="required">*</span>
+                  <input class="standard-input" type="tel" id="phone" name="phone" pattern='^\+?\d{10,12}' placeholder="Example: 01925999111" required>
+                </label>
+                <label for="email-address" class="standard-label">
+                  Email<span class="required">*</span>
+                  <input class="standard-input" id="email-address" name="mail" type="email" placeholder="Your email address..." required>
+                </label>
+                <label for="DOB" class="standard-label">
+                  Date of Birth<span class="required">*</span>
+                  <input class="standard-input" type="date" name="DOB" id="DOB" required>
+                </label>
+                <label for="accounttype" class="standard-label" name="accountt">
+                  What type of account are you applying for?<span class="required">*</span>
+                  <br>
+                  <select  id="account-select" class="standard-select" required>
+                    <option value="select" disabled selected>Choose Account</option>
+                    <option value="basic-current">Basic Current Account</option>
+                    <option value="premium-current">Premium Current Account</option>
+                    <option value="instant-saver">Instant Access Savings Account</option>
+                    <option value="lifetime-isa">Lifetime ISA</option>
+                    <option value="help-to-buy">Help to Buy ISA</option>
+                  </select>
+                </label>
+                <button type="button" id="show-address">Continue</button>
+              </fieldset>
+              
+              <fieldset class="sub-container" id="address-history">
+                <h2 class="sub-heading">Address History</h2>
+                <hr>
+                
+                <div id="current-address">
+                  <h3 class="small-heading">Current Address</h3>
+                  <label for="line1" class="standard-label">
+                    Address line 1<span class="required">*</span>
+                    <input class="standard-input" type="text" name="cad1" required>
+                  </label>
+                  <label for="line2" class="standard-label">
+                    Address line 2
+                    <input class="standard-input" name="cad2" type="text">
+                  </label>
+                  <label for="town-city" class="standard-label">
+                    Town/City<span class="required">*</span>
+                    <input class="standard-input" name="town" type="text" required>
+                  </label>
+                  <label for="county" class="standard-label">
+                    County
+                    <input class="standard-input" name="country" type="text">
+                  </label>
+                  <label for="postcode" class="standard-label">
+                    Post Code<span class="required">*</span>
+                    <input class="standard-input" name="pcode" type="text" maxlength="8" required>
+                  </label>
+                </div>
+                <div id="previous-address">
+                  <h3 class="small-heading">Previous Address</h3>
+                  <label for="line1" class="standard-label" >
+                    Address line 1<span class="required">*</span>
+                    <input class="standard-input" type="text" name="pad1">
+                  </label>
+                  <label for="line2" class="standard-label">
+                    Address line 2
+                    <input class="standard-input" type="text" name="pad2">
+                  </label>
+                  <label for="town-city" class="standard-label">
+                    Town/City<span class="required">*</span>
+                    <input class="standard-input" type="text" name="town2">
+                  </label>
+                  <label for="county" class="standard-label">
+                    County
+                    <input class="standard-input" type="text" name="country2">
+                  </label>
+                  <label for="postcode" class="standard-label">
+                    Post Code<span class="required">*</span>
+                    <input class="standard-input" type="text" maxlength="8" name="pcode2">
+                  </label>
+                </div>
+                <button type="button" id="get-consent">Continue</button>
+              </fieldset>
+        
+              <fieldset class="sub-container" id="your-consent">
+                <h2 class="sub-heading">Your Consent</h2>
+                <hr>
+                <label class="standard-label" id="credit-search" for="credit-search">
+                  Tick the box below to allow the bank to use the details you have provided to conduct a credit search if necessary.
+                  <br>
+                <input type="checkbox" id="credit-click" name="credit-search"><br>
+                </label>
+                <label class="standard-label" for="info-request" id="info-request">
+                  Tick the box below to allow the bank to contact you via email if further information is needed to progress your application.
+                  <br>
+                  <input type="checkbox" id="info-click" name="info-request"><br>
+                </label>
+                
+              </fieldset>
+              <button id="submit-app" type="submit">Submit Application</button>
+            </form>
+          </div>
+        
+</body>
+</html>
